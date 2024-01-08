@@ -1,0 +1,31 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        
+
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "Python: Flask",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/appa.py", // Replace with your actual file name
+            "args": [
+                "run",
+                "--no-reload"
+            ],
+            "env": {
+                "FLASK_APP": "${workspaceFolder}/appa.py" // Replace with your actual file name
+            },
+            "envFile": "${workspaceFolder}/.env",
+            "stopOnEntry": false,
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
